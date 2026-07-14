@@ -8,8 +8,16 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+   const allowedOrigins = process.env.CLIENT_URL
+     ? process.env.CLIENT_URL.split(",")
+     : ["http://localhost:5173"];
+
+   app.use(
+     cors({
+       origin: allowedOrigins,
+     })
+   );
+   app.use(express.json());
 app.use("/api/activities", activityRoutes);
 
 app.get("/", (req, res) => {
