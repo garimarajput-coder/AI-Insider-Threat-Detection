@@ -10,13 +10,14 @@ import RiskChart from "./components/RiskChart";
 function App() {
   const [activities, setActivities] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
-useEffect(() => {
-  fetch("http://localhost:5000/api/activities")
-    .then((res) => res.json())
-    .then((data) => setActivities(data))
-    .catch((err) => console.error(err));
-}, []);
+   useEffect(() => {
+     fetch(`${API_URL}/api/activities`)
+       .then((res) => res.json())
+       .then((data) => setActivities(data))
+       .catch((err) => console.error(err));
+   }, []);
 
   const highRisk = activities.filter(
     (a) => a.riskPoints >= 35
