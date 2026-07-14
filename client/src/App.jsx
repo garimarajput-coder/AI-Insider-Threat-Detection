@@ -12,7 +12,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
 useEffect(() => {
-  fetch("http://localhost:5000/api/activities")
+  fetch("{https://ai-insider-threat-detection.onrender.com/api/activities")
     .then((res) => res.json())
     .then((data) => setActivities(data))
     .catch((err) => console.error(err));
