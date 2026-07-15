@@ -92,7 +92,7 @@ bashnpm run dev
 
 7. Set up the frontend
 
-. In a new terminal:
+8. In a new terminal:
 
 bashcd client
 npm install
