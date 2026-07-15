@@ -75,24 +75,24 @@ cd AI-Insider-Threat-Detection
 bashcd server
 npm install
 
-Create a .env file inside server/:
+3. Create a .env file inside server/:
 
 envMONGO_URI=your_mongodb_connection_string
 PORT=5000
 
-Seed the database with demo activity data:
+4. Seed the database with demo activity data:
 
 bashnode seed.js
 
-Start the API server:
+5. Start the API server:
 
 bashnpm run dev
 
-The API will run at http://localhost:5000.
+6. The API will run at http://localhost:5000.
 
-3. Set up the frontend
+7. Set up the frontend
 
-In a new terminal:
+. In a new terminal:
 
 bashcd client
 npm install
